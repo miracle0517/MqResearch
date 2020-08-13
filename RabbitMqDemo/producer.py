@@ -1,9 +1,6 @@
 import pika
 
-connection = pika.BlockingConnection(
-    pika.ConnectionParameters('192.168.0.108')
-)
-
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))  # 建立连接
 channel = connection.channel()  # 声明一个管道
 
 # 声明queue
